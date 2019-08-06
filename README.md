@@ -8,7 +8,6 @@ $ export GOPROXY=https://goproxy.io
 $ go get -u github.com/swaggo/swag/cmd/swag
 ```
 
-
 ## 开发步骤
 ```sh
 $ cp config/app.toml.example config/app.toml 
