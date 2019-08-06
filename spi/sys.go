@@ -1,8 +1,8 @@
 package spi
 
 import (
-	"exam/model"
-	"exam/protocol"
+	"api/model"
+	"api/protocol"
 	"github.com/jinzhu/copier"
 )
 

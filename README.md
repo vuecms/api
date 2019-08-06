@@ -10,7 +10,6 @@ $ go get -u github.com/swaggo/swag/cmd/swag
 
 ## 开发步骤
 ```sh
-$ cp config/app.toml.example config/app.toml 
 $ edit config/app.toml #修改数据库配置
 $ swag init
 $ go run main.go

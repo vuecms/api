@@ -1,7 +1,7 @@
 package protocol
 
 import (
-	"exam/model"
+	"api/model"
 	"github.com/gin-gonic/gin"
 )
 

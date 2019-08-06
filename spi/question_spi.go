@@ -1,7 +1,7 @@
 package spi
 
 import (
-	"exam/model"
+	"api/model"
 	"log"
 )
 

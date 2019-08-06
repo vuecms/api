@@ -1,12 +1,12 @@
 package spi
 
 import (
-	"exam/model"
+	"api/model"
 	"github.com/jinzhu/gorm"
 	"log"
 )
 
-const DEFAULT_CONFIG_FILE = "config/app.toml"
+const DefaultConfigFile = "config/app.toml"
 
 type Application struct {
 	Config      *AppConfig
@@ -43,7 +43,7 @@ func NewInstance(file string) (*Application, error) {
 }
 
 func DefaultInstance() (*Application, error) {
-	return NewInstance(DEFAULT_CONFIG_FILE)
+	return NewInstance(DefaultConfigFile)
 }
 
 func (app *Application) Destroy() {

@@ -1,8 +1,8 @@
 # This is example config
 
 [database]
-driver = "mysql"
-url  = "root:b2c456@(172.26.62.50:3306)/book?parseTime=True"
+driver = "postgres"
+url  = "host=127.0.0.1 port=5432 user=postgres password=postgres dbname=vcms sslmode=disable"
 
 [http]
 host = "0.0.0.0"

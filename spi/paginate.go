@@ -2,7 +2,6 @@ package spi
 
 import (
 	"math"
-
 	"github.com/jinzhu/gorm"
 )
 
