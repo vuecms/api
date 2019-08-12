@@ -8,8 +8,6 @@ import (
 	"github.com/gin-gonic/gin/binding"
 	//_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
-	//"github.com/swaggo/files"
-	//"github.com/swaggo/gin-swagger"
 	"log"
 )
 

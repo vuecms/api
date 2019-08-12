@@ -9,9 +9,11 @@ require (
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/jinzhu/copier v0.0.0-20190625015134-976e0346caa8
 	github.com/jinzhu/gorm v1.9.10
-	github.com/kr/pretty v0.1.0 // indirect
 	github.com/leodido/go-urn v1.1.0 // indirect
-	github.com/lib/pq v1.2.0
+	github.com/lib/pq v1.2.0 // indirect
+	github.com/mattn/go-sqlite3 v1.10.0
+	github.com/swaggo/files v0.0.0-20190704085106-630677cd5c14
+	github.com/swaggo/gin-swagger v1.2.0
 	gopkg.in/go-playground/validator.v9 v9.29.1
 )
 
