@@ -20,6 +20,9 @@ func main() {
 	}
 	c := controller.NewController(app)
 
+	r.Static("/public", "./public")
+	r.LoadHTMLGlob("views/**/*")
+
 	v1 := r.Group("/api/v1")
 	{
 
