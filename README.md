@@ -5,7 +5,8 @@
 $ go version
 go version go1.12 linux/amd64
 $ export GOPROXY=https://goproxy.io
-$ go get -u github.com/swaggo/swag/cmd/swag
+$ go get -u -insecure github.com/swaggo/swag/cmd/swag
+$ go get -u -insecure github.com/jirfag/go-queryset/cmd/goqueryset
 ```
 
 ## 开发步骤
@@ -14,3 +15,4 @@ $ edit config/app.toml #修改数据库配置
 $ swag init
 $ go run main.go
 ```
+
