@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	github.com/BurntSushi/toml v0.3.1
+	github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-playground/locales v0.12.1 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
@@ -14,6 +15,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.10.0
 	github.com/swaggo/files v0.0.0-20190704085106-630677cd5c14
 	github.com/swaggo/gin-swagger v1.2.0
+	github.com/swaggo/swag v1.5.1
 	gopkg.in/go-playground/validator.v9 v9.29.1
 )
 

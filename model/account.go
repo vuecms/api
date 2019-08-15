@@ -10,7 +10,7 @@ import (
 // gen:qs
 type Account struct {
 	gorm.Model
-	UserName      string
-	Age   int
-	Pass  string
+	UserName  string
+	Age       int
+	Pass      string
 }
