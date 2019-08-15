@@ -14,6 +14,7 @@ type Application struct {
 	AreaSpi     *AreaSpi
 	QuestionSpi *QuestionSpi
 	AccountSpi  *AccountSpi
+	ArticleSpi  *ArticleSpi
 }
 
 func NewInstance(file string) (*Application, error) {
@@ -35,12 +36,14 @@ func NewInstance(file string) (*Application, error) {
 		&model.Organization{},
 		&model.QuestionLibrary{},
 		&model.Account{},
+		&model.Article{},
 	)
 
 	app.Config = config
 	app.QuestionSpi = NewQuestionSpi(&app)
 	app.AreaSpi = NewAreaSpi(&app)
 	app.AccountSpi = NewAccountSpi(&app)
+	app.ArticleSpi = NewArticleSpi(&app)
 
 	return &app, err
 }

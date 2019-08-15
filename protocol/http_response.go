@@ -29,3 +29,8 @@ type AccountPaginator struct {
 	Paginator
 	Records []model.Account `json:"records"`
 }
+
+type ArticlePaginator struct {
+	Paginator
+	Records []model.Article `json:"records"`
+}

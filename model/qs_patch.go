@@ -21,6 +21,10 @@ func (qs AccountQuerySet) DB() *gorm.DB {
 	return qs.db
 }
 
+func (qs ArticleQuerySet) DB() *gorm.DB {
+	return qs.db
+}
+
 func (qs QuestionLibraryQuerySet) DB() *gorm.DB {
 	return qs.db
 }

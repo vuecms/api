@@ -62,6 +62,42 @@ definitions:
       updated_at:
         type: string
     type: object
+  model.Article:
+    properties:
+      addDate:
+        description: 创建时间
+        type: string
+      body:
+        description: 内容
+        type: string
+      description:
+        description: 描述
+        type: string
+      nickName:
+        description: 用户昵称
+        type: string
+      origin:
+        description: 用户名
+        type: string
+      picture:
+        description: 图片
+        type: string
+      postType:
+        description: 文章类型
+        type: string
+      status:
+        description: 状态
+        type: integer
+      subject:
+        description: 标题
+        type: string
+      userID:
+        description: 用户ID
+        type: integer
+      visited:
+        description: 访问次数
+        type: integer
+    type: object
   model.QuestionLibrary:
     properties:
       difficulty:
@@ -130,6 +166,27 @@ definitions:
       records:
         items:
           $ref: '#/definitions/model.Area'
+        type: array
+      total_page:
+        type: integer
+      total_record:
+        type: integer
+    type: object
+  protocol.ArticlePaginator:
+    properties:
+      limit:
+        type: integer
+      next_page:
+        type: integer
+      offset:
+        type: integer
+      page:
+        type: integer
+      prev_page:
+        type: integer
+      records:
+        items:
+          $ref: '#/definitions/model.Article'
         type: array
       total_page:
         type: integer
@@ -279,6 +336,33 @@ paths:
       summary: Create an area
       tags:
       - area
+  /article:
+    get:
+      consumes:
+      - application/json
+      description: get Articles
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/protocol.ArticlePaginator'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/protocol.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/protocol.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/protocol.Error'
+      summary: List Article
+      tags:
+      - article
   /question-libraries:
     get:
       consumes:

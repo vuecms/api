@@ -92,6 +92,11 @@ func main() {
 		{
 			account.GET("", c.ListAccounts)
 		}
+
+		article := v1.Group("/article")
+		{
+			article.GET("", c.ListArticles)
+		}
 	}
 	r.GET("/", func(context *gin.Context) {
 		context.Redirect(http.StatusMovedPermanently,"/swagger/index.html")
