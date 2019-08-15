@@ -38,6 +38,10 @@ func main() {
 			questionLibs.PATCH(":id", c.UpdateQuestionLib)
 		}
 
+		account := v1.Group("/account")
+		{
+			account.GET("", c.ListAccounts)
+		}
 	}
 	//r.GET("/", func(context *gin.Context) {
 	//	context.Redirect(http.StatusMovedPermanently,"/swagger/index.html")

@@ -17,6 +17,10 @@ func (qs AreaQuerySet) DB() *gorm.DB {
 	return qs.db
 }
 
+func (qs AccountQuerySet) DB() *gorm.DB {
+	return qs.db
+}
+
 func (qs QuestionLibraryQuerySet) DB() *gorm.DB {
 	return qs.db
 }

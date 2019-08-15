@@ -13,6 +13,7 @@ type Application struct {
 	DB          *gorm.DB
 	AreaSpi     *AreaSpi
 	QuestionSpi *QuestionSpi
+	AccountSpi  *AccountSpi
 }
 
 func NewInstance(file string) (*Application, error) {
@@ -33,11 +34,13 @@ func NewInstance(file string) (*Application, error) {
 		&model.Area{},
 		&model.Organization{},
 		&model.QuestionLibrary{},
+		&model.Account{},
 	)
 
 	app.Config = config
 	app.QuestionSpi = NewQuestionSpi(&app)
 	app.AreaSpi = NewAreaSpi(&app)
+	app.AccountSpi = NewAccountSpi(&app)
 
 	return &app, err
 }
