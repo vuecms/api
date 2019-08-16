@@ -14,7 +14,6 @@ func NewError(ctx *gin.Context, status int, err error) {
 }
 
 //for document
-
 type AreaPaginator struct {
 	Paginator
 	Records []model.Area `json:"records"`
