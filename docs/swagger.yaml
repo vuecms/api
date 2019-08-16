@@ -363,33 +363,6 @@ paths:
       summary: List Article
       tags:
       - article
-  /lsa:
-    get:
-      consumes:
-      - application/json
-      description: get Articles
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/model.Article'
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/protocol.Error'
-        "404":
-          description: Not Found
-          schema:
-            $ref: '#/definitions/protocol.Error'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/protocol.Error'
-      summary: List Article
-      tags:
-      - article
   /question-libraries:
     get:
       consumes:

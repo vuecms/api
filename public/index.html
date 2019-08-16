@@ -1,1 +1,50 @@
-1111111111111
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例</title>
+    <script src="vue.min.js"></script>
+    <script src="vue-resource.min.js"></script>
+    <link  href="elementui/theme-chalk.css" rel="stylesheet">
+    <script src="elementui/index.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{ message }}</p>
+  <input type="button" @click="get()" value="点我异步获取数据(Get)">
+
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+        <p>Try Element</p>
+    </el-dialog>
+
+
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
+</div>
+
+<script>
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!',
+    visible:false
+  },
+  methods:{
+        get:function(){
+            //发送get请求
+            this.$http.get('/api/v1/article').then(function(res){
+                console.log(res)
+                document.write(res.body.records[0].Subject);
+                document.write(res.body.records[0].Body);
+                document.write("<br/>");
+                document.write(res.body.records[0].ID);
+            },function(){
+                console.log('请求失败处理');
+            });
+        }
+    }
+})
+</script>
+</body>
+</html>
