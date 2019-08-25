@@ -11,7 +11,7 @@ require (
 	github.com/jinzhu/copier v0.0.0-20190625015134-976e0346caa8
 	github.com/jinzhu/gorm v1.9.10
 	github.com/leodido/go-urn v1.1.0 // indirect
-	github.com/lib/pq v1.2.0 // indirect
+	github.com/lib/pq v1.2.0
 	github.com/mattn/go-sqlite3 v1.10.0
 	github.com/swaggo/files v0.0.0-20190704085106-630677cd5c14
 	github.com/swaggo/gin-swagger v1.2.0
